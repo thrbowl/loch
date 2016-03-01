@@ -8,7 +8,7 @@
                     <div class="content recent-post">
                         {% for article in articles[:3] %}
                         <div class="recent-single-post">
-                            <a href="" class="post-title">{{ article.title }}</a>
+                            <a href="{{ SITEURL }}/{{ article.url }}" class="post-title">{{ article.title }}</a>
 
                             <div class="date">{{ article.locale_date }}</div>
                         </div>
