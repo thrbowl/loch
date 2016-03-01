@@ -26,6 +26,14 @@
                             </div>
                         </footer>
                     </article>
+                    <div id="SOHUCS" sid="{{ article.metadata['slug'] }}"></div>
+                    <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js"></script>
+                    <script type="text/javascript">
+                        window.changyan.api.config({
+                            appid: 'cysgQcAvk',
+                            conf: 'prod_786e993afc94743d81d875c03c925c00'
+                        });
+                    </script>
                 </main>
                 {% include "sidebar.html" %}
             </div>
