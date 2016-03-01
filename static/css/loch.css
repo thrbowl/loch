@@ -1,0 +1,27 @@
+.navbar-brand {
+    color: #303030;
+    font-weight: 400;
+    font-size: 2.5em;
+    line-height: 1em;
+    margin: 0;
+}
+
+.pagination .newer-posts,
+.pagination .older-posts {
+    border-radius: 2px;
+    color: #ffffff;
+    display: inline-block;
+    line-height: 36px;
+    padding: 0 14px;
+}
+
+.main-footer .widget .my-tools a {
+    border: medium none;
+}
+.main-footer .widget .my-tools a:hover {
+    border: medium none;
+}
+.main-footer .widget .my-tools hr {
+    border-top: 1px dashed #303030;
+    margin: 1em 0;
+}

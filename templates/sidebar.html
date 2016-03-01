@@ -1,0 +1,24 @@
+<aside class="col-md-4 sidebar">
+    <!-- start tag cloud widget -->
+    <div class="widget">
+        <h4 class="title">关于我</h4>
+
+        <div class="content">
+            <p>{{ AUTHORDESC }}</p>
+        </div>
+    </div>
+    <!-- end tag cloud widget -->
+
+    <!-- start tag cloud widget -->
+    <div class="widget">
+        <h4 class="title">标签云</h4>
+
+        <div class="content tag-cloud">
+            {% for tag, null in tags %}
+            <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+            {% endfor %}
+{#            <a href="/tag-cloud/">...</a>#}
+        </div>
+    </div>
+    <!-- end tag cloud widget -->
+</aside>

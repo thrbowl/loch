@@ -1,0 +1,15 @@
+{% if DEFAULT_PAGINATION %}
+<nav class="pagination" role="navigation">
+    {% if articles_page.has_previous() %}
+        <a href="{{ SITEURL }}/{{ articles_previous_page.url }}" class="newer-posts">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+    {% endif %}
+    <span class="page-number">第 {{ articles_page.number }} 页 &frasl; 共 {{ articles_paginator.num_pages }} 页</span>
+    {% if articles_page.has_next() %}
+        <a href="{{ SITEURL }}/{{ articles_next_page.url }}" class="older-posts">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    {% endif %}
+</nav>
+{% endif %}

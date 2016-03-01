@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+    <link rel="shortcut icon" href="{{ SITEURL }}/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ SITEURL }}/favicon.ico" type="image/x-icon">
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/screen.css" rel="stylesheet">
+    <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/loch.css" rel="stylesheet">
+    <!-- Ext CSS-->
+    {%- block css %}{% endblock -%}
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+      <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/html5shiv.min.js"></script>
+      <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    {% block header %}
+    {% include "header.html" %}
+    {% endblock %}
+    {% block main %}
+    {% endblock %}
+    {% block footer %}
+    {% include "footer.html" %}
+    {% endblock %}
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/bootstrap.min.js"></script>
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/loch.js"></script>
+    <!-- Ext JavaScript-->
+    {% block js %}{% endblock %}
+  </body>
+</html>

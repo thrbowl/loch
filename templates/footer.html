@@ -1,0 +1,60 @@
+<footer class="main-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="widget">
+                    <h4 class="title">最新文章</h4>
+
+                    <div class="content recent-post">
+                        {% for article in articles[:3] %}
+                        <div class="recent-single-post">
+                            <a href="" class="post-title">{{ article.title }}</a>
+
+                            <div class="date">{{ article.locale_date }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="widget">
+                    <h4 class="title">友情链接</h4>
+
+                    <div class="content tag-cloud friend-links">
+                        {% for name, url in LINKS %}
+                        <a href="{{ url }}" title="{{ name }}" target="_blank">{{ name }}</a>
+                        {% endfor %}
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="widget">
+                    <h4 class="title">常用工具</h4>
+
+                    <div class="content tag-cloud my-tools">
+                        {% for name, url in TOOLS %}
+                        <a href="{{ url }}" title="{{ name }}" target="_blank">{{ name }}</a>
+                        {% endfor %}
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <span>Copyright &copy; <a href="{{ SITEURL }}">{{ SITENAME }}</a></span> |
+                <span><a href="http://www.miibeian.gov.cn/" target="_blank">{{ ICPLICENSE }}</a></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="#" id="back-to-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
